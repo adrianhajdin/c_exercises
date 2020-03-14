@@ -1,5 +1,3 @@
-# c_exercises
-
-## RITEH, Exercises in C
+### RITEH, Exercises in C
 
 - bitwise operators
