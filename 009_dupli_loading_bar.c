@@ -48,14 +48,31 @@ int main() {
 
     print_binary(bin, n);
     
-    do {
-        for (int i = 0; i < (n / 2); i++) {
+    bin = bin | 1;
+
+    print_binary(bin, n);
+
+    for (int i = 0; i < n; i++) {   
+        if(i == 0) {
             bin = bin << 1;
             bin = bin | 1;
-        }
+        } 
 
+        bin = bin << 1;
+        
         print_binary(bin, n);
-    } while (bin != mask);
+    }
     
+    
+    // 00000000
+    // 00000001
+    // 00000011
+    // 00000110
+    // 00001100
+    // 00011000
+    // 00110000
+    // 01100000
+    // 11000000
+    // 10000000
     return 0;
 }
