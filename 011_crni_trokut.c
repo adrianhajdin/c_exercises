@@ -12,7 +12,8 @@ void print_binary(uint32_t b, int n) {
 		printf("%d",b & p ? 1 : 0);
 		p >>= 1;
 	}
-	printf("\n");
+
+	// printf("\n");
 }
 
 uint32_t create_bitmask(int n) {
@@ -39,27 +40,23 @@ uint32_t reverse_binary(uint32_t input, int n) {
 }
 
 int main() {
-    uint32_t bin = 0;
-    int n;
+	uint32_t bin = 0;
+	int n;
 
-    scanf("%d", &n);
+	scanf("%d", &n);
 
-    print_binary(bin, n);
-    
-    bin = bin | 1;
+	print_binary(bin, n);
+    printf("\n");
 
-    print_binary(bin, n);
+    for (int i = 0; i < (n / 2); i++) {
+        bin = bin << 1;
+        bin = bin | 1;
 
-    for (int i = 0; i < n; i++) {   
-        if(i == 0) {
-            bin = bin << 1;
-            bin = bin | 1;
-        } else {
-            bin = bin << 1;
-        }
-        
-        print_binary(bin, n);
+        print_binary(bin, (n / 2));
+        print_binary(reverse_binary(bin, (n / 2)), (n / 2));
+        printf("\n");
     }
-    
-    return 0;
+
+
+	return 0;
 }
