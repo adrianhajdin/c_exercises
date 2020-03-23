@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#ifndef DEBUG
-#define DEBUG(...) printf(__VA_ARGS__)
-#endif
-
 #define M 100
 
 int count_cards(char c){
@@ -41,10 +37,7 @@ void sort (int array[], int n){
   }
 }
 
-
-
 int main() {
-
   int n;
   char c;
   int decks[M] = {0}, cards[M][M];

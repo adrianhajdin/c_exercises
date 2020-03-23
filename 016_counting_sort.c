@@ -1,39 +1,31 @@
 #include <stdio.h>
-#include <stdint.h>
- 
-void load_data(int polje[], int n){
-    int input;
 
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &input);
-
-        polje[i] = input;
-    }  
+void load_data(int input[], int n) {
+	for (int i = 0; i < n; ++i) {
+		scanf("%d ", &input[i]);
+	}
 }
 
-void counting_sort(int in[], int out[], int n) {
-    for (int i = 0; i < n; i++) {
-        int value = in[i];
-
-        out[value]++;
-    }
-} 
+void counting_sort(int array[], int red[], int n){
+	for (int i = 0; i < n; ++i) {
+		red[array[i]]++;
+	}
+}
 
 int main() {
-    int polje[10000];
-    int n, k;
+	int polje[10000], brojevi[100] = { 0 }, n;
 
-    scanf("%d", &n);
- 
-    load_data(polje, n);
+	scanf("%d ", &n);
 
-    k = sizeof(polje) / sizeof(polje[0]);
+	load_data(polje, n);
 
-    counting_sort(polje, n, k);
- 
-    for (int i = 0; i < n; i++){
-        printf("%d ", polje[i]);
-    }
- 
-    return 0;
+	counting_sort(polje, brojevi, n);
+
+	for (int i = 0; i < 100; ++i) {
+		for (int j = 0; j < brojevi[i]; ++j) {
+			printf("%d ", i);
+		}
+	}
+
+	return 0;
 }
