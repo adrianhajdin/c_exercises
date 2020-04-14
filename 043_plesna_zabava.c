@@ -34,15 +34,12 @@ void count(plesacica p[], int n, char ime[32]){
   }
 }
 
-int compare(plesacica p1, plesacica p2){
-  if (p1.bp > p2.bp){
-    return 0;
-  } else if (p1.bp < p2.bp){
-    return 1;
-  } else if (p1.bp == p2.bp){
-    return strcmp(p1.ime, p2.ime);
-  }
-  return -1;
+int dancomp(plesacica d1, plesacica d2) {
+    if (d1.bp == d2.bp) {
+        return strcmp(d1.ime, d2.ime);
+    }
+
+    return d1.bp < d2.bp;
 }
 
 void sort (plesacica array[], int n){
@@ -50,7 +47,7 @@ void sort (plesacica array[], int n){
     plesacica tmp = array[i];
     int j = i;
 
-    while (j > 0 && compare(array[j - 1], tmp) > 0) {
+    while (j > 0 && dancomp(array[j - 1], tmp) > 0) {
         array[j] = array[j - 1];
         j--;
     }
