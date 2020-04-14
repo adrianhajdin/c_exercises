@@ -28,6 +28,6 @@ int main() {
     } else {
         printf("Ravnoteza");
     }
-    
+
     return 0;
 }

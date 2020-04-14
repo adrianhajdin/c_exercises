@@ -1,5 +1,32 @@
 {
   "files.associations": {
-    "complex": "c"
-  }
+    "complex": "c",
+    "__bit_reference": "c",
+    "algorithm": "c",
+    "bitset": "c",
+    "chrono": "c",
+    "unordered_map": "c",
+    "string": "c",
+    "filesystem": "c",
+    "iosfwd": "c",
+    "limits": "c",
+    "random": "c",
+    "ratio": "c",
+    "sstream": "c",
+    "__locale": "c",
+    "__string": "c",
+    "string_view": "c",
+    "__hash_table": "c",
+    "__split_buffer": "c",
+    "array": "c",
+    "deque": "c",
+    "initializer_list": "c",
+    "iterator": "c",
+    "queue": "c",
+    "stack": "c",
+    "utility": "c",
+    "vector": "c",
+    "__tuple": "c",
+    "ctype.h": "c"
+}
 }
