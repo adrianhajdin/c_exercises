@@ -16,6 +16,7 @@ void fix(char word[]) {
   int i, n = 0;
 
   word[0] = toupper(word[0]);
+  
   for (i = 1; i < strlen(word); i++) {
     if (!isalpha(word[i])) {
       n++;
@@ -23,6 +24,7 @@ void fix(char word[]) {
       word[i - n] = tolower(word[i]);
     }
   }
+
   word[i - n] = '\0';
 }
 
