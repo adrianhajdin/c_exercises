@@ -2,7 +2,6 @@
 #include <string.h>
 #include <ctype.h>
 
-
 #ifndef DEBUG
 #define DEBUG(...) printf(__VA_ARGS__)
 #endif
